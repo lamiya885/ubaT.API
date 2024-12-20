@@ -4,7 +4,12 @@ namespace ubaT.Services.Abstracts
 {
     public interface ILanguageService
     {
-        Task CreatedAsync(LanguageCreateDto dto);
+        Task CreateAsync(LanguageCreateDto dto);
+        Task UpdateAsync(LanguageUpdateDto dto,string code);
+        Task DeleteAsync(string code);
         Task<IEnumerable<LanguageGetDto>> GetAllAsync();
+        Task<LanguageGetDto> GetByCodeAsync(string code);
+
+
     }
 }

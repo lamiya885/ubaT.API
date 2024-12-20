@@ -141,3 +141,7 @@ C:\Users\ll novbe\source\repos\ubaT\ubaT\obj\Debug\net8.0\refint\ubaT.dll
 C:\Users\ll novbe\source\repos\ubaT\ubaT\obj\Debug\net8.0\ubaT.pdb
 C:\Users\ll novbe\source\repos\ubaT\ubaT\obj\Debug\net8.0\ubaT.genruntimeconfig.cache
 C:\Users\ll novbe\source\repos\ubaT\ubaT\obj\Debug\net8.0\ref\ubaT.dll
+C:\Users\ll novbe\source\repos\ubaT\ubaT\obj\Debug\net8.0\ubaT.sourcelink.json
+C:\Users\ll novbe\source\repos\ubaT\ubaT\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\ll novbe\source\repos\ubaT\ubaT\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\ll novbe\source\repos\ubaT\ubaT\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
