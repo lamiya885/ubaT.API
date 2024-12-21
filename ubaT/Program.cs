@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using ubaT.DAL;
 using ubaT.Services.Abstracts;
 using ubaT.Services.Implement;
+using FluentValidation.AspNetCore;
+using FluentValidation;
 
 namespace ubaT
 {
@@ -13,8 +15,13 @@ namespace ubaT
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddControllers();
             builder.Services.AddDbContext<ubaTDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("MSSql")));
+
+            builder.Services.AddFluentValidationAutoValidation();
+            builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+
             builder.Services.AddScoped<ILanguageService,LanguageService>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

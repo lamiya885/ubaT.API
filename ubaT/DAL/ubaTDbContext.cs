@@ -9,10 +9,10 @@ namespace ubaT.DAL
         {
 
         }
-        public DbSet<Languages> Languages { get; set; }
+        public DbSet<Language> Languages { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Languages>(b =>
+            modelBuilder.Entity<Language>(b =>
             {
                 b.HasKey(x => x.Code);
                 b.HasIndex(x=>x.Name)
@@ -25,7 +25,7 @@ namespace ubaT.DAL
                 .HasMaxLength(32);
                 b.Property(x => x.Icon)
                 .HasMaxLength(128);
-                b.HasData(new Languages
+                b.HasData(new Language
                 { 
                 Code="az",
                 Name="Azərbaycan",

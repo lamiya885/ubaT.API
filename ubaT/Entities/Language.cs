@@ -1,6 +1,6 @@
 ﻿namespace ubaT.Entities
 {
-    public class Languages
+    public class Language
     {
         public string Code { get; set; }
         public string Name { get; set; }

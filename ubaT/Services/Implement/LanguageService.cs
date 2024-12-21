@@ -11,10 +11,10 @@ namespace ubaT.Services.Implement
     {
         public async Task CreateAsync(LanguageCreateDto dto)
         {
-            await _context.Languages.AddAsync(new Entities.Languages { 
+            await _context.Languages.AddAsync(new Entities.Language { 
                 Code=dto.Code,
                 Name=dto.Name,
-                Icon=dto.Icon
+                Icon=dto.IconUrl
             });
 
             await _context.SaveChangesAsync(); 
@@ -25,7 +25,7 @@ namespace ubaT.Services.Implement
         {
              var entity=await _context.Languages.FindAsync(code);
 
-           _context.Languages.Update(new Languages
+           _context.Languages.Update(new Language
              {
                  Code=dto.Code,
                  Name=dto.Name,

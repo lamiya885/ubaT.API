@@ -1,14 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ubaT.DAL;
 using ubaT.DTOs.Languages;
+using ubaT.Entities;
 using ubaT.Services.Abstracts;
 
 namespace ubaT.Controllers
 {
     [ApiController]
     [Route("/api/[controller]")]
-    public class LanguagesController (ILanguageService _service,ubaTDbContext _context): ControllerBase
+    public class LanguagesController (ILanguageService _service,IMapper _mapper,ubaTDbContext _context): ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> Get()
@@ -28,7 +30,8 @@ namespace ubaT.Controllers
         [HttpPost]
         public async Task<IActionResult> Create (LanguageCreateDto dto)
         {
-            await _service.CreateAsync(dto);
+            var data=_mapper.Map<Language>(dto);
+           // await _service.CreateAsync(dto);
             return Ok();
         }
         [HttpPut]
