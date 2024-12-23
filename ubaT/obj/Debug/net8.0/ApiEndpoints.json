@@ -1,5 +1,84 @@
 [
   {
+    "ContainingType": "ubaT.Controllers.BannedWordsController",
+    "Method": "GetAll",
+    "RelativePath": "api/BannedWords",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.BannedWordsController",
+    "Method": "Create",
+    "RelativePath": "api/BannedWords",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ubaT.DTOs.BannedWords.BannedWordCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.BannedWordsController",
+    "Method": "GetByText",
+    "RelativePath": "api/BannedWords/{text}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.BannedWordsController",
+    "Method": "Update",
+    "RelativePath": "api/BannedWords/{text}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ubaT.DTOs.BannedWords.BannedWordUpdateDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.BannedWordsController",
+    "Method": "Delete",
+    "RelativePath": "api/BannedWords/{text}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ubaT.Controllers.LanguagesController",
     "Method": "GetAll",
     "RelativePath": "api/Languages",
@@ -79,13 +158,82 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ubaT.Controllers.WordController",
+    "ContainingType": "ubaT.Controllers.WordsController",
     "Method": "GetAll",
-    "RelativePath": "api/Word",
+    "RelativePath": "api/Words",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.WordsController",
+    "Method": "Create",
+    "RelativePath": "api/Words",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ubaT.DTOs.Words.WordCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.WordsController",
+    "Method": "GetByText",
+    "RelativePath": "api/Words/{text}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.WordsController",
+    "Method": "Update",
+    "RelativePath": "api/Words/{text}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ubaT.DTOs.Words.WordUpdateDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.WordsController",
+    "Method": "Delete",
+    "RelativePath": "api/Words/{text}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]
