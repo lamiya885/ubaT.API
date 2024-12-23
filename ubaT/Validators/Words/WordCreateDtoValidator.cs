@@ -15,7 +15,7 @@ namespace ubaT.Validators.Words
                     .MinimumLength(2)
                     .WithMessage("Sozun metninin uzunlugu 2-den az ola bilmez")
                     .MaximumLength(64)
-                    .WithMessage("Sozun  mteninin uzunlugu 64-den cox ola bilmez")
+                    .WithMessage("Sozun  metninin uzunlugu 64-den cox ola bilmez")
                     .Matches("^[A-Za-z]{2,63}$");
             RuleFor(x => x.LangCode)
                    .NotEmpty()

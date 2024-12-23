@@ -23,6 +23,8 @@ namespace ubaT
             builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
             builder.Services.AddScoped<ILanguageService,LanguageService>();
+            builder.Services.AddScoped<IWordService, WordService>();
+            builder.Services.AddScoped<IBannedWordService,BannedWordService>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
