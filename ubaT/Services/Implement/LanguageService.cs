@@ -24,7 +24,7 @@ namespace ubaT.Services.Implement
      
         public async Task UpdateAsync (LanguageUpdateDto dto,string code )
         {
-             var entity=await _context.Languages.FindAsync(code);
+             var entity=await _context.Languages.FirstOrDefaultAsync(x => x.Code == code);
             if (await _context.Languages.AnyAsync(x => x.Code == entity.Code))
             {
             _context.Languages.Update(_mapper.Map<Language>(dto));
@@ -37,7 +37,7 @@ namespace ubaT.Services.Implement
         }
         public async Task DeleteAsync( string code)
         {
-            var entity = await _context.Languages.FindAsync(code);
+            var entity = await _context.Languages.FirstOrDefaultAsync(x => x.Code == code);
             if(await _context.Languages.AnyAsync(x=>x.Code==entity.Code))
             {
              _context.Languages.Remove(entity);

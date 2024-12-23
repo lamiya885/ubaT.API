@@ -41,14 +41,14 @@ namespace ubaT.Services.Implement
                 throw new BannedWordExistException();
             await _context.BannedWords.AddAsync(_mapper.Map<BannedWord>(dto));
             await _context.SaveChangesAsync();
-     
+          //SQL-e dusmur.
         }
 
       
 
         public async Task UpdateAsync(BannedWordUpdateDto dto,string text)
         {
-            var entity= await _context.BannedWords.FindAsync(text);
+            var entity= await _context.BannedWords.FirstOrDefaultAsync(x=>x.Text==text);
             if (await _context.BannedWords.AnyAsync(x => x.Text == entity.Text))
             {
             _context.BannedWords.Update(entity);
@@ -64,7 +64,7 @@ namespace ubaT.Services.Implement
 
         public async Task DeleteAsync(string text)
         {
-            var entity = await _context.BannedWords.FindAsync(text);
+            var entity = await _context.BannedWords.FirstOrDefaultAsync(x => x.Text == text);
             if (await _context.BannedWords.AnyAsync(x => x.Text == entity.Text))
             {
             _context.BannedWords.Remove(entity);

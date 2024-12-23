@@ -2,13 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using ubaT.DTOs.Words;
 using ubaT.Exceptions;
+using ubaT.Services.Abstracts;
 using ubaT.Services.Implement;
 
 namespace ubaT.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class WordsController( WordService _service) : ControllerBase
+    public class WordsController( IWordService _service) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()

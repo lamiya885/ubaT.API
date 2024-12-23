@@ -91,6 +91,7 @@ namespace ubaT.DAL
                 bw.HasOne(x => x.Word)
                       .WithMany(x => x.BannedWords)
                       .HasForeignKey(x=>x.WordId);
+
             });
 
             base.OnModelCreating(modelBuilder);

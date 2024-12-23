@@ -42,7 +42,7 @@ namespace ubaT.Services.Implement
 
         public async Task UpdateAsync(WordUpdateDto dto, string text)
         {
-            var data= await _context.Words.FindAsync(text);
+            var data= await _context.Words.FirstOrDefaultAsync(x=>x.Text==text);
             if (await _context.Words.AnyAsync(x => x.Text == data.Text))
             {
             _context.Words.Update(data);
@@ -55,7 +55,7 @@ namespace ubaT.Services.Implement
         }
         public async Task DeleteAsync(string text)
         {
-            var entity = await _context.Words.FindAsync(text);
+            var entity = await _context.Words.FirstOrDefaultAsync(x => x.Text == text);
             if (await _context.Words.AnyAsync(x => x.Text == entity.Text))
             {
                 _context.Words.Remove(entity);
