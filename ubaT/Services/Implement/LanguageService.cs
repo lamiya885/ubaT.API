@@ -1,22 +1,23 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using ubaT.DAL;
 using ubaT.DTOs.Languages;
 using ubaT.Entities;
+using ubaT.Exceptions.Language;
 using ubaT.Services.Abstracts;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ubaT.Services.Implement
 {
-    public class LanguageService(ubaTDbContext _context) : ILanguageService
+    public class LanguageService(ubaTDbContext _context,IMapper _mapper) : ILanguageService
     {
         public async Task CreateAsync(LanguageCreateDto dto)
         {
-            await _context.Languages.AddAsync(new Entities.Language { 
-                Code=dto.Code,
-                Name=dto.Name,
-                Icon=dto.IconUrl
-            });
-
+            if (await _context.Languages.AnyAsync(x => x.Code == dto.Code))
+                throw new LanguageExistException();
+            await _context.Languages.AddAsync(_mapper.Map<Language>(dto));
             await _context.SaveChangesAsync(); 
          
         }
@@ -24,47 +25,53 @@ namespace ubaT.Services.Implement
         public async Task UpdateAsync (LanguageUpdateDto dto,string code )
         {
              var entity=await _context.Languages.FindAsync(code);
-
-           _context.Languages.Update(new Language
-             {
-                 Code=dto.Code,
-                 Name=dto.Name,
-                 Icon=dto.Icon
-             });
+            if (await _context.Languages.AnyAsync(x => x.Code == entity.Code))
+            {
+            _context.Languages.Update(_mapper.Map<Language>(dto));
+            }
+            else
+            {
+                throw new LanguageExistException($"{code} koduna uygun kod tapilmadi,zehmet olmasa duzgun kod daxil edin ");
+            }
             await _context.SaveChangesAsync();
         }
         public async Task DeleteAsync( string code)
         {
             var entity = await _context.Languages.FindAsync(code);
+            if(await _context.Languages.AnyAsync(x=>x.Code==entity.Code))
+            {
              _context.Languages.Remove(entity);
+            }
+            else
+            {
+                throw new LanguageExistException($"{code} koduna uygun kod tapilmadi,zehmet olmasa duzgun kod daxil edin ");
+            }
             await _context.SaveChangesAsync();
 
         }
 
         public async Task<IEnumerable<LanguageGetDto>> GetAllAsync()
         {
-            return await _context.Languages.Select(x => new LanguageGetDto
-            {
-                Code = x.Code,
-                Name = x.Name,
-                Icon = x.Icon
-            }).ToListAsync();
-            await _context.SaveChangesAsync();
+          var datas=  await _context.Languages.ToListAsync();
+            return _mapper.Map<IEnumerable<LanguageGetDto>>(datas);
         }
 
         public async Task<LanguageGetDto?> GetByCodeAsync(string? code)
         {
 
             var entity = await _context.Languages.FirstOrDefaultAsync(x=>x.Code==code);
-            return new LanguageGetDto
+            if (await _context.Languages.AnyAsync(x => x.Code == entity.Code))
             {
-                Code = entity.Code,
-                Name = entity.Name,
-                Icon = entity.Icon
-            };
+                return _mapper.Map<LanguageGetDto>(entity);
 
-            await _context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new LanguageExistException($"{code} koduna uygun kod tapilmadi,zehmet olmasa duzgun kod daxil edin ");
+            }
+            return _mapper.Map<LanguageGetDto>(entity);
 
+          
         }
     }
 }

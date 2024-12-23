@@ -3,44 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\ubaT.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\controllers\\wordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\controllers\\wordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\controllers\\languagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\controllers\\languagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\services\\implement\\languageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\services\\implement\\languageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\profiles\\languageprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\profiles\\languageprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\validators\\languages\\languagescreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\validators\\languages\\languagescreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\dtos\\languages\\languagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\dtos\\languages\\languagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\services\\abstracts\\ilanguageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\services\\abstracts\\ilanguageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\dtos\\languages\\languageupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\dtos\\languages\\languageupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\dal\\ubatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\dal\\ubatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\entities\\language.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\entities\\language.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\controllers\\bannedwordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\controllers\\bannedwordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,141 +21,46 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 291,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BannedWordsController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\BannedWordsController.cs",
+              "RelativeDocumentMoniker": "ubaT\\Controllers\\BannedWordsController.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\BannedWordsController.cs",
+              "RelativeToolTip": "ubaT\\Controllers\\BannedWordsController.cs",
+              "ViewState": "AgIAAAsAAACQZWZmZuYwwH4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T18:43:00.172Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LanguageService.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\LanguageService.cs",
-              "RelativeDocumentMoniker": "ubaT\\Services\\Implement\\LanguageService.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\LanguageService.cs",
-              "RelativeToolTip": "ubaT\\Services\\Implement\\LanguageService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADgvxAAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:45:46.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Program.cs",
-              "RelativeDocumentMoniker": "ubaT\\Program.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Program.cs",
-              "RelativeToolTip": "ubaT\\Program.cs",
-              "ViewState": "AgIAAA4AAADAzMzMzMwnwBEAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:41:44.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LanguagesCreateDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\Languages\\LanguagesCreateDtoValidator.cs",
-              "RelativeDocumentMoniker": "ubaT\\Validators\\Languages\\LanguagesCreateDtoValidator.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\Languages\\LanguagesCreateDtoValidator.cs",
-              "RelativeToolTip": "ubaT\\Validators\\Languages\\LanguagesCreateDtoValidator.cs",
-              "ViewState": "AgIAAAYAAABAmZmZmZkuwAwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T09:24:02.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LanguageCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DTOs\\Languages\\LanguageCreateDto.cs",
-              "RelativeDocumentMoniker": "ubaT\\DTOs\\Languages\\LanguageCreateDto.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DTOs\\Languages\\LanguageCreateDto.cs",
-              "RelativeToolTip": "ubaT\\DTOs\\Languages\\LanguageCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:41:35.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "LanguagesController.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\LanguagesController.cs",
               "RelativeDocumentMoniker": "ubaT\\Controllers\\LanguagesController.cs",
               "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\LanguagesController.cs",
               "RelativeToolTip": "ubaT\\Controllers\\LanguagesController.cs",
-              "ViewState": "AgIAABUAAADg//////8gwCEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAABAMDMzMzMrwH4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:41:03.898Z",
+              "WhenOpened": "2024-12-22T16:02:22.146Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LanguageProfile.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\ProFiles\\LanguageProfile.cs",
-              "RelativeDocumentMoniker": "ubaT\\ProFiles\\LanguageProfile.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\ProFiles\\LanguageProfile.cs",
-              "RelativeToolTip": "ubaT\\ProFiles\\LanguageProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "WordsController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\WordsController.cs",
+              "RelativeDocumentMoniker": "ubaT\\Controllers\\WordsController.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\WordsController.cs",
+              "RelativeToolTip": "ubaT\\Controllers\\WordsController.cs",
+              "ViewState": "AgIAAAYAAABYz8zMzMwUwA0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T10:30:09.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ubaTDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DAL\\ubaTDbContext.cs",
-              "RelativeDocumentMoniker": "ubaT\\DAL\\ubaTDbContext.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DAL\\ubaTDbContext.cs",
-              "RelativeToolTip": "ubaT\\DAL\\ubaTDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAUAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:41:27.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ILanguageService.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Abstracts\\ILanguageService.cs",
-              "RelativeDocumentMoniker": "ubaT\\Services\\Abstracts\\ILanguageService.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Abstracts\\ILanguageService.cs",
-              "RelativeToolTip": "ubaT\\Services\\Abstracts\\ILanguageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:46:19.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Language.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Entities\\Language.cs",
-              "RelativeDocumentMoniker": "ubaT\\Entities\\Language.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Entities\\Language.cs",
-              "RelativeToolTip": "ubaT\\Entities\\Language.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:41:32.619Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LanguageUpdateDto.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DTOs\\Languages\\LanguageUpdateDto.cs",
-              "RelativeDocumentMoniker": "ubaT\\DTOs\\Languages\\LanguageUpdateDto.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DTOs\\Languages\\LanguageUpdateDto.cs",
-              "RelativeToolTip": "ubaT\\DTOs\\Languages\\LanguageUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:41:38.7Z",
+              "WhenOpened": "2024-12-22T17:12:16.475Z",
               "EditorCaption": ""
             }
           ]

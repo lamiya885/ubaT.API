@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "ubaT.Controllers.LanguagesController",
-    "Method": "Get",
+    "Method": "GetAll",
     "RelativePath": "api/Languages",
     "HttpMethod": "GET",
     "IsController": true,
@@ -27,8 +27,24 @@
   },
   {
     "ContainingType": "ubaT.Controllers.LanguagesController",
+    "Method": "GetByCode",
+    "RelativePath": "api/Languages/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.LanguagesController",
     "Method": "Update",
-    "RelativePath": "api/Languages",
+    "RelativePath": "api/Languages/{code}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -38,22 +54,6 @@
         "Type": "ubaT.DTOs.Languages.LanguageUpdateDto",
         "IsRequired": true
       },
-      {
-        "Name": "code",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ubaT.Controllers.LanguagesController",
-    "Method": "GetByCode",
-    "RelativePath": "api/Languages/{code}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
       {
         "Name": "code",
         "Type": "System.String",
@@ -76,6 +76,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.WordController",
+    "Method": "GetAll",
+    "RelativePath": "api/Word",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

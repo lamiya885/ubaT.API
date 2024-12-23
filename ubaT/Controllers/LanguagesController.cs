@@ -1,54 +1,157 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using ubaT.DAL;
 using ubaT.DTOs.Languages;
 using ubaT.Entities;
+using ubaT.Exceptions;
 using ubaT.Services.Abstracts;
 
 namespace ubaT.Controllers
 {
     [ApiController]
     [Route("/api/[controller]")]
-    public class LanguagesController (ILanguageService _service,IMapper _mapper,ubaTDbContext _context): ControllerBase
+    public class LanguagesController(ILanguageService _service) : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAll()
         {
-
+            try
+            {
             return Ok(await _service.GetAllAsync());
+            }
+            catch (Exception ex)
+            {
+                if (ex is IBaseException Bex)
+                {
+                    return StatusCode(Bex.StatusCode, new
+                    {
+                        Mesage = Bex.ErrorMessage
+                    });
+
+                }
+                else
+                {
+                    return BadRequest(new
+                    {
+                        Message = ex.Message
+                    });
+                }
+            }
         }
 
         [HttpGet("{code}")]
         public async Task<IActionResult> GetByCode(string code)
         {
+            try
+            {
+                return Ok(await _service.GetByCodeAsync(code));
+            }
+            catch (Exception ex)
+            {
+                if (ex is IBaseException Bex)
+                {
+                    return StatusCode(Bex.StatusCode, new
+                    {
+                        Mesage = Bex.ErrorMessage
+                    });
 
-            return Ok(await _service.GetByCodeAsync(code));
+                }
+                else
+                {
+                    return BadRequest(new
+                    {
+                        Message = ex.Message
+                    });
+                }
+            }
         }
-
 
         [HttpPost]
-        public async Task<IActionResult> Create (LanguageCreateDto dto)
-        {
-            var data=_mapper.Map<Language>(dto);
-           // await _service.CreateAsync(dto);
-            return Ok();
+        public async Task<IActionResult> Create(LanguageCreateDto dto)
+            {
+                    try
+                    {
+                        await _service.CreateAsync(dto);
+                        return Ok();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (ex is IBaseException Bex)
+                        {
+                            return StatusCode(Bex.StatusCode, new
+                            {
+                                Massage = Bex.ErrorMessage
+                            });
+
+                        }
+                        else
+                        {
+                            return BadRequest(new
+                            {
+                                Massage = ex.Message
+
+                            });
+                        }
+                    }
         }
-        [HttpPut]
-        public async Task<IActionResult> Update(LanguageUpdateDto dto,string code)
-        {
-            var entity = await _context.Languages.FindAsync(code);
-            if (entity is null) return NotFound();
-            await _service.UpdateAsync(dto,code);
-            return Ok();
+        [HttpPut("{code}")]
+        public async Task<IActionResult> Update(LanguageUpdateDto dto, string code)
+            {
+                    try
+                    {
+
+                        await _service.UpdateAsync(dto, code);
+                        return Ok();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (ex is IBaseException Bex)
+                        {
+                            return StatusCode(Bex.StatusCode, new
+                            {
+                                Massage = Bex.ErrorMessage
+                            });
+                        }
+                        else
+                        {
+                            return BadRequest(new
+                            {
+                                Message = ex.Message
+                            });
+                        }
+                    }
         }
         [HttpDelete("{code}")]
-        public async Task<IActionResult> Delete(string code)
-        {
-            var entity = await _context.Languages.FindAsync(code);
-            if (entity is null) return NotFound();
-            await _service.DeleteAsync(code);
-            return Ok();
+         public async Task<IActionResult> Delete(string code)
+            {
+                    try
+                    {
+                        await _service.DeleteAsync(code);
+                        return Ok();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (ex is IBaseException Bex)
+                        {
+                            return StatusCode(Bex.StatusCode, new
+                            {
+                                StatusCode = Bex.StatusCode,
+                                Message = Bex.ErrorMessage
+                            });
+
+                        }
+                        else
+                        {
+                            return BadRequest(new
+                            {
+                                Message = ex.Message
+                            });
+                        }
+                    }
+        }
         }
     }
-}
+
+

@@ -21,7 +21,7 @@ namespace ubaT.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ubaT.Entities.Languages", b =>
+            modelBuilder.Entity("ubaT.Entities.Language", b =>
                 {
                     b.Property<string>("Code")
                         .HasMaxLength(2)
@@ -43,7 +43,7 @@ namespace ubaT.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Languages");
+                    b.ToTable("Languages", (string)null);
 
                     b.HasData(
                         new
