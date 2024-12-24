@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "qZ76Z1sMp/CtDrVVT3BqTXdgqF8sNtZJqFySMZu4U7c=",
+  "Hash": "tT+EPJxeEMa4KpdmYVLg7tKxpiLPdVFNuKzB1UZ1DeE=",
   "Source": "ubaT",
   "BasePath": "_content/ubaT",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

@@ -24,6 +24,16 @@ namespace ubaT.Validators.Words
                    .WithMessage("Kod null ola bilməz ")
                    .Length(2)
                    .WithMessage("Kod uzunluğu 2-dən az ve ya cox ola bilməz ");
+            RuleForEach(x => x.BannedWords)
+                    .NotNull()  
+                    .MinimumLength(2)
+                    .Matches("^[A-Za-z]{2,63}$");
+            RuleFor(x => x.BannedWords)
+                    .NotNull()
+                    .WithMessage("qadagan edilmis soz null ola bilmez")
+                    .Must(X=>X.Count==6)
+                    .WithMessage("6 qadagan edilmis soz olmalidir");
+                
         }
 
     }

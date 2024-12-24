@@ -11,12 +11,12 @@ namespace ubaT.Controllers
     [ApiController]
     public class WordsController( IWordService _service) : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("[action]")]
         public async Task<IActionResult> GetAll()
         {
             return Ok(await _service.GetAllAsync());
         }
-        [HttpGet("{text}")]
+        [HttpGet("[action]/{text}")]
         public async Task<IActionResult> GetByText(string text)
         {
             return Ok(await _service.GetByTextAsync(text));
@@ -28,7 +28,7 @@ namespace ubaT.Controllers
             return Ok();
 
         }
-        [HttpPost("{text}")]
+        [HttpPost("[action]/{text}")]
         public async Task<IActionResult> Update(WordUpdateDto dto,string text)
         {
            
@@ -56,7 +56,7 @@ namespace ubaT.Controllers
                 }
             }
         }
-        [HttpDelete("{text}")]
+        [HttpDelete("[action]/{text}")]
         public async Task<IActionResult> Delete(string text)
         { 
             try

@@ -13,7 +13,7 @@ namespace ubaT.Controllers
     [ApiController]
     public class BannedWordsController (IMapper _mapper,IBannedWordService _service): ControllerBase
     {
-        [HttpGet]
+        [HttpGet("[action]")]
         public async Task<IActionResult> GetAll()
         {
             try
@@ -40,7 +40,7 @@ namespace ubaT.Controllers
             }
         }
      
-        [HttpGet("{text}")]
+        [HttpGet("[action]/{text}")]
         public async Task<IActionResult> GetByText(string text)
         {
             try
@@ -69,7 +69,7 @@ namespace ubaT.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
         public async Task<IActionResult> Create (BannedWordCreateDto dto)
         {
             try
@@ -97,7 +97,7 @@ namespace ubaT.Controllers
                 }
             }
         }
-        [HttpPost("{text}")]
+        [HttpPost("[action]/{text}")]
         public async Task<IActionResult> Update(BannedWordUpdateDto dto,string text)
         {
             try
@@ -124,7 +124,7 @@ namespace ubaT.Controllers
                 }
             }
         }
-        [HttpDelete("{text}")]
+        [HttpDelete("[action]/{text}")]
         public async Task<IActionResult> Delete(string text)
         {
             try

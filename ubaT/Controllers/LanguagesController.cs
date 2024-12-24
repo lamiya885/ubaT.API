@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using System;
 using ubaT.DAL;
 using ubaT.DTOs.Languages;
 using ubaT.Entities;
@@ -14,7 +15,7 @@ namespace ubaT.Controllers
     [Route("/api/[controller]")]
     public class LanguagesController(ILanguageService _service) : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("[action]")]
         public async Task<IActionResult> GetAll()
         {
             try
@@ -41,7 +42,7 @@ namespace ubaT.Controllers
             }
         }
 
-        [HttpGet("{code}")]
+        [HttpGet("[action]/{code}")]
         public async Task<IActionResult> GetByCode(string code)
         {
             try
@@ -68,7 +69,7 @@ namespace ubaT.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
         public async Task<IActionResult> Create(LanguageCreateDto dto)
             {
                     try
@@ -96,7 +97,7 @@ namespace ubaT.Controllers
                         }
                     }
         }
-        [HttpPut("{code}")]
+        [HttpPut("[action]/{code}")]
         public async Task<IActionResult> Update(LanguageUpdateDto dto, string code)
             {
                     try
@@ -123,7 +124,7 @@ namespace ubaT.Controllers
                         }
                     }
         }
-        [HttpDelete("{code}")]
+        [HttpDelete("[action]/{code}")]
          public async Task<IActionResult> Delete(string code)
             {
                     try

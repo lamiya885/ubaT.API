@@ -35,45 +35,54 @@ namespace ubaT.Services.Implement
                 throw new BannedWordExistException($"{text}  uygun qadagan edilmis soz tapilmadi,zehmet olmasa duzgun qadagan edilmis soz daxil edin ");
             }
         }
-        public async Task CreateAsync(BannedWordCreateDto dto)
+        public async Task<int> CreateAsync(BannedWordCreateDto dto)
         {
             if (await _context.BannedWords.AnyAsync(x => x.Text == dto.Text))
                 throw new BannedWordExistException();
-            await _context.BannedWords.AddAsync(_mapper.Map<BannedWord>(dto));
+            BannedWord bannedWord = _mapper.Map<BannedWord>(dto);
+
+            await _context.BannedWords.AddAsync(bannedWord);
             await _context.SaveChangesAsync();
+            return bannedWord.Id;
           //SQL-e dusmur.
         }
 
       
 
-        public async Task UpdateAsync(BannedWordUpdateDto dto,string text)
+        public async Task<int> UpdateAsync(BannedWordUpdateDto dto,string text)
         {
             var entity= await _context.BannedWords.FirstOrDefaultAsync(x=>x.Text==text);
             if (await _context.BannedWords.AnyAsync(x => x.Text == entity.Text))
             {
-            _context.BannedWords.Update(entity);
+            BannedWord upbannedWord= _mapper.Map<BannedWord>(dto);
+                
+
+
+                _context.BannedWords.Update(entity);
+            await _context.SaveChangesAsync();
+                return upbannedWord.Id;
             }
             else
             {
                 throw new BannedWordExistException($"{text}  uygun qadagan edilmis  soz tapilmadi,zehmet olmasa duzgun  qadagan edilmis soz daxil edin ");
             }
-            await _context.SaveChangesAsync();
 
       
         }
 
-        public async Task DeleteAsync(string text)
+        public async Task<int> DeleteAsync(string text)
         {
             var entity = await _context.BannedWords.FirstOrDefaultAsync(x => x.Text == text);
             if (await _context.BannedWords.AnyAsync(x => x.Text == entity.Text))
             {
             _context.BannedWords.Remove(entity);
+            await _context.SaveChangesAsync();
+                return entity.Id;
             }
             else
             {
                 throw new BannedWordExistException($"{text}  uygun qadagan edilmis  soz tapilmadi,zehmet olmasa duzgun qadagan edilmis soz daxil edin ");
             }
-            await _context.SaveChangesAsync();
         }
 
 

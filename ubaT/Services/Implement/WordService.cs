@@ -32,39 +32,54 @@ namespace ubaT.Services.Implement
                 throw new WordExistException($"{text}  uygun soz tapilmadi,zehmet olmasa duzgun soz daxil edin ");
             }
         }
-        public async Task CreateAsync(WordCreateDto dto)
+        public async Task<int> CreateAsync(WordCreateDto dto)
         {
             if (await _context.Words.AnyAsync(x => x.Text == dto.Text))
                 throw new WordExistException();
-            await _context.Words.AddAsync(_mapper.Map<Word>(dto));
+            Word word = _mapper.Map<Word>(dto);
+            word.BannedWords = dto.BannedWords.Select(x => new BannedWord
+            { 
+                Text=x
+            }).ToList();
+
+            await _context.Words.AddAsync(word);
             await _context.SaveChangesAsync();
+            return word.Id;
         }
 
-        public async Task UpdateAsync(WordUpdateDto dto, string text)
+        public async Task<int> UpdateAsync(WordUpdateDto dto, string text)
         {
             var data= await _context.Words.FirstOrDefaultAsync(x=>x.Text==text);
             if (await _context.Words.AnyAsync(x => x.Text == data.Text))
             {
+                Word upword=_mapper.Map<Word>(dto);
+                upword.BannedWords = dto.BannedWords.Select(x => new BannedWord
+                {
+                    Text = x
+                }).ToList();
             _context.Words.Update(data);
+            await _context.SaveChangesAsync();
+                return upword.Id;
             }
             else
             {
                 throw new WordExistException($"{text}  uygun soz tapilmadi,zehmet olmasa duzgun soz daxil edin ");
             }
-            await _context.SaveChangesAsync();
         }
-        public async Task DeleteAsync(string text)
+        public async Task<int> DeleteAsync(string text)
         {
             var entity = await _context.Words.FirstOrDefaultAsync(x => x.Text == text);
             if (await _context.Words.AnyAsync(x => x.Text == entity.Text))
             {
+              
                 _context.Words.Remove(entity);
+                await _context.SaveChangesAsync();
+                return entity.Id;
             }
             else
             {
                 throw new WordExistException($"{text}  uygun soz tapilmadi,zehmet olmasa duzgun soz daxil edin ");
             }
-             await _context.SaveChangesAsync();
         }
 
     }

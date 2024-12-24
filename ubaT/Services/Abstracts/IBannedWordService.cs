@@ -5,9 +5,9 @@ namespace ubaT.Services.Abstracts
 {
     public interface IBannedWordService
     {
-        Task CreateAsync(BannedWordCreateDto dto);
-        Task UpdateAsync(BannedWordUpdateDto dto, string text);
-        Task DeleteAsync(string text);
+        Task<int> CreateAsync(BannedWordCreateDto dto);
+        Task<int> UpdateAsync(BannedWordUpdateDto dto, string text);
+        Task<int> DeleteAsync(string text);
         Task<IEnumerable<BannedWordGetDto>> GetAllAsync();
        Task<BannedWordGetDto> GetByTextAsync(string text);
     }

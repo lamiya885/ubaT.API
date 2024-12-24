@@ -1,18 +1,8 @@
 [
   {
     "ContainingType": "ubaT.Controllers.BannedWordsController",
-    "Method": "GetAll",
-    "RelativePath": "api/BannedWords",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ubaT.Controllers.BannedWordsController",
     "Method": "Create",
-    "RelativePath": "api/BannedWords",
+    "RelativePath": "api/BannedWords/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -27,8 +17,34 @@
   },
   {
     "ContainingType": "ubaT.Controllers.BannedWordsController",
+    "Method": "Delete",
+    "RelativePath": "api/BannedWords/Delete/{text}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.BannedWordsController",
+    "Method": "GetAll",
+    "RelativePath": "api/BannedWords/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.BannedWordsController",
     "Method": "GetByText",
-    "RelativePath": "api/BannedWords/{text}",
+    "RelativePath": "api/BannedWords/GetByText/{text}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +60,7 @@
   {
     "ContainingType": "ubaT.Controllers.BannedWordsController",
     "Method": "Update",
-    "RelativePath": "api/BannedWords/{text}",
+    "RelativePath": "api/BannedWords/Update/{text}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -63,35 +79,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ubaT.Controllers.BannedWordsController",
-    "Method": "Delete",
-    "RelativePath": "api/BannedWords/{text}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "text",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ubaT.Controllers.LanguagesController",
-    "Method": "GetAll",
-    "RelativePath": "api/Languages",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "ubaT.Controllers.LanguagesController",
     "Method": "Create",
-    "RelativePath": "api/Languages",
+    "RelativePath": "api/Languages/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -106,8 +96,34 @@
   },
   {
     "ContainingType": "ubaT.Controllers.LanguagesController",
+    "Method": "Delete",
+    "RelativePath": "api/Languages/Delete/{code}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.LanguagesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Languages/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.LanguagesController",
     "Method": "GetByCode",
-    "RelativePath": "api/Languages/{code}",
+    "RelativePath": "api/Languages/GetByCode/{code}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -123,7 +139,7 @@
   {
     "ContainingType": "ubaT.Controllers.LanguagesController",
     "Method": "Update",
-    "RelativePath": "api/Languages/{code}",
+    "RelativePath": "api/Languages/Update/{code}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -139,32 +155,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ubaT.Controllers.LanguagesController",
-    "Method": "Delete",
-    "RelativePath": "api/Languages/{code}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "code",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ubaT.Controllers.WordsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Words",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -185,8 +175,34 @@
   },
   {
     "ContainingType": "ubaT.Controllers.WordsController",
+    "Method": "Delete",
+    "RelativePath": "api/Words/Delete/{text}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.WordsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Words/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.WordsController",
     "Method": "GetByText",
-    "RelativePath": "api/Words/{text}",
+    "RelativePath": "api/Words/GetByText/{text}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -202,7 +218,7 @@
   {
     "ContainingType": "ubaT.Controllers.WordsController",
     "Method": "Update",
-    "RelativePath": "api/Words/{text}",
+    "RelativePath": "api/Words/Update/{text}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -212,22 +228,6 @@
         "Type": "ubaT.DTOs.Words.WordUpdateDto",
         "IsRequired": true
       },
-      {
-        "Name": "text",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ubaT.Controllers.WordsController",
-    "Method": "Delete",
-    "RelativePath": "api/Words/{text}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
       {
         "Name": "text",
         "Type": "System.String",
