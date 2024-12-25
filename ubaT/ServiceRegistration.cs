@@ -13,5 +13,6 @@ namespace ubaT
             services.AddScoped<IGameService, GameService>();
             return services;
         }
+        public static IApplictionBuilder UseubaTExceptionHandler
     }
 }

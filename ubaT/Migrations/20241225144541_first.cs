@@ -6,11 +6,24 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ubaT.Migrations
 {
     /// <inheritdoc />
-    public partial class CreatedBannedWordAndWordTables : Migration
+    public partial class first : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Languages",
+                columns: table => new
+                {
+                    Code = table.Column<string>(type: "nchar(2)", fixedLength: true, maxLength: 2, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
+                    Icon = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Languages", x => x.Code);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Games",
                 columns: table => new
@@ -77,6 +90,11 @@ namespace ubaT.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Languages",
+                columns: new[] { "Code", "Icon", "Name" },
+                values: new object[] { "az", "https://www.google.com/imgres?q=azerbaijan%20flag%20icon&imgurl=https%3A%2F%2Fupload.wmA", "Azərbaycan" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_BannedWords_WordId",
                 table: "BannedWords",
@@ -86,6 +104,12 @@ namespace ubaT.Migrations
                 name: "IX_Games_LangCode",
                 table: "Games",
                 column: "LangCode");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Languages_Name",
+                table: "Languages",
+                column: "Name",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Words_LangCode",
@@ -104,6 +128,9 @@ namespace ubaT.Migrations
 
             migrationBuilder.DropTable(
                 name: "Words");
+
+            migrationBuilder.DropTable(
+                name: "Languages");
         }
     }
 }

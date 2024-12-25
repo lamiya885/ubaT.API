@@ -12,8 +12,8 @@ using ubaT.DAL;
 namespace ubaT.Migrations
 {
     [DbContext(typeof(ubaTDbContext))]
-    [Migration("20241223193851_CreatedBannedWordAndWordTables")]
-    partial class CreatedBannedWordAndWordTables
+    [Migration("20241225144541_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
