@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/BannedWords": {
+    "/api/BannedWords/GetAll": {
       "get": {
         "tags": [
           "BannedWords"
@@ -15,7 +15,31 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/BannedWords/GetByText/{text}": {
+      "get": {
+        "tags": [
+          "BannedWords"
+        ],
+        "parameters": [
+          {
+            "name": "text",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/BannedWords/Create": {
       "post": {
         "tags": [
           "BannedWords"
@@ -46,27 +70,7 @@
         }
       }
     },
-    "/api/BannedWords/{text}": {
-      "get": {
-        "tags": [
-          "BannedWords"
-        ],
-        "parameters": [
-          {
-            "name": "text",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
+    "/api/BannedWords/Update/{text}": {
       "post": {
         "tags": [
           "BannedWords"
@@ -105,7 +109,9 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/BannedWords/Delete/{text}": {
       "delete": {
         "tags": [
           "BannedWords"
@@ -127,7 +133,7 @@
         }
       }
     },
-    "/api/Languages": {
+    "/api/Languages/GetAll": {
       "get": {
         "tags": [
           "Languages"
@@ -137,7 +143,31 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/Languages/GetByCode/{code}": {
+      "get": {
+        "tags": [
+          "Languages"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Languages/Create": {
       "post": {
         "tags": [
           "Languages"
@@ -168,27 +198,7 @@
         }
       }
     },
-    "/api/Languages/{code}": {
-      "get": {
-        "tags": [
-          "Languages"
-        ],
-        "parameters": [
-          {
-            "name": "code",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
+    "/api/Languages/Update/{code}": {
       "put": {
         "tags": [
           "Languages"
@@ -227,7 +237,9 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/Languages/Delete/{code}": {
       "delete": {
         "tags": [
           "Languages"
@@ -249,7 +261,7 @@
         }
       }
     },
-    "/api/Words": {
+    "/api/Words/GetAll": {
       "get": {
         "tags": [
           "Words"
@@ -259,7 +271,31 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/Words/GetByText/{text}": {
+      "get": {
+        "tags": [
+          "Words"
+        ],
+        "parameters": [
+          {
+            "name": "text",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Words": {
       "post": {
         "tags": [
           "Words"
@@ -290,27 +326,7 @@
         }
       }
     },
-    "/api/Words/{text}": {
-      "get": {
-        "tags": [
-          "Words"
-        ],
-        "parameters": [
-          {
-            "name": "text",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
+    "/api/Words/Update/{text}": {
       "post": {
         "tags": [
           "Words"
@@ -349,7 +365,9 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/Words/Delete/{text}": {
       "delete": {
         "tags": [
           "Words"
@@ -448,6 +466,14 @@
           "langCode": {
             "type": "string",
             "nullable": true
+          },
+          "bannedWords": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -461,6 +487,14 @@
           },
           "langCode": {
             "type": "string",
+            "nullable": true
+          },
+          "bannedWords": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           }
         },

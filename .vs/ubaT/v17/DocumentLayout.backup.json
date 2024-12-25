@@ -1,42 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\",
+  "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\ubaT.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\ll novbe\\desktop\\ubat.api\\ubat\\services\\implement\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\services\\implement\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\services\\implement\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\ll novbe\\desktop\\ubat.api\\ubat\\profiles\\gameprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\profiles\\gameprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\exceptions\\game\\gamenotfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\exceptions\\game\\gamenotfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\ll novbe\\desktop\\ubat.api\\ubat\\dal\\ubatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\dal\\ubatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\exceptions\\bannedword\\bannedwordnotfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\exceptions\\bannedword\\bannedwordnotfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\ll novbe\\desktop\\ubat.api\\ubat\\services\\implement\\bannedwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\services\\implement\\bannedwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\services\\implement\\bannedwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\ll novbe\\desktop\\ubat.api\\ubat\\entities\\bannedword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\entities\\bannedword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\controllers\\bannedwordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\controllers\\bannedwordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\ll novbe\\desktop\\ubat.api\\ubat\\services\\abstracts\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\dtos\\games\\gameeditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\dtos\\games\\gameeditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\validators\\words\\wordcreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\validators\\words\\wordcreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\validators\\bannedword\\bannedwordupdatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\validators\\bannedword\\bannedwordupdatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\validators\\games\\gamecreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\validators\\games\\gamecreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\services\\abstracts\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\services\\abstracts\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\ll novbe\\desktop\\ubat.api\\ubat\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\validators\\bannedword\\bannedwordcreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\validators\\bannedword\\bannedwordcreatedtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\ll novbe\\desktop\\ubat.api\\ubat\\services\\implement\\wordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\services\\implement\\wordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\exceptions\\bannedword\\bannedwordexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\exceptions\\bannedword\\bannedwordexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\ll novbe\\desktop\\ubat.api\\ubat\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|c:\\users\\hp\\desktop\\ubat.api\\ubat\\dal\\ubatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78A8CAB-D6A1-44D7-8138-961BB3CD8391}|ubaT\\ubaT.csproj|solutionrelative:ubat\\dal\\ubatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,132 +66,188 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ubaTDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\DAL\\ubaTDbContext.cs",
-              "RelativeDocumentMoniker": "ubaT\\DAL\\ubaTDbContext.cs",
-              "ToolTip": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\DAL\\ubaTDbContext.cs",
-              "RelativeToolTip": "ubaT\\DAL\\ubaTDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T15:28:55.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GameProfile.cs",
-              "DocumentMoniker": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Profiles\\GameProfile.cs",
-              "RelativeDocumentMoniker": "ubaT\\Profiles\\GameProfile.cs",
-              "ToolTip": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Profiles\\GameProfile.cs",
-              "RelativeToolTip": "ubaT\\Profiles\\GameProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Title": "GameNotFound.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Exceptions\\Game\\GameNotFound.cs",
+              "RelativeDocumentMoniker": "ubaT\\Exceptions\\Game\\GameNotFound.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Exceptions\\Game\\GameNotFound.cs",
+              "RelativeToolTip": "ubaT\\Exceptions\\Game\\GameNotFound.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T15:21:50.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameService.cs",
-              "DocumentMoniker": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\GameService.cs",
-              "RelativeDocumentMoniker": "ubaT\\Services\\Implement\\GameService.cs",
-              "ToolTip": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\GameService.cs",
-              "RelativeToolTip": "ubaT\\Services\\Implement\\GameService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBEAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T15:15:58.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IGameService.cs",
-              "DocumentMoniker": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Services\\Abstracts\\IGameService.cs",
-              "RelativeDocumentMoniker": "ubaT\\Services\\Abstracts\\IGameService.cs",
-              "ToolTip": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Services\\Abstracts\\IGameService.cs",
-              "RelativeToolTip": "ubaT\\Services\\Abstracts\\IGameService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T15:10:35.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Entities\\Game.cs",
-              "RelativeDocumentMoniker": "ubaT\\Entities\\Game.cs",
-              "ToolTip": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Entities\\Game.cs",
-              "RelativeToolTip": "ubaT\\Entities\\Game.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T15:07:34.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BannedWord.cs",
-              "DocumentMoniker": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Entities\\BannedWord.cs",
-              "RelativeDocumentMoniker": "ubaT\\Entities\\BannedWord.cs",
-              "ToolTip": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Entities\\BannedWord.cs",
-              "RelativeToolTip": "ubaT\\Entities\\BannedWord.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:48:41.531Z",
+              "WhenOpened": "2024-12-25T07:04:10.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "BannedWordService.cs",
-              "DocumentMoniker": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\BannedWordService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\BannedWordService.cs",
               "RelativeDocumentMoniker": "ubaT\\Services\\Implement\\BannedWordService.cs",
-              "ToolTip": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\BannedWordService.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\BannedWordService.cs",
               "RelativeToolTip": "ubaT\\Services\\Implement\\BannedWordService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAApwDkAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAACAMjMzMzMjwFMAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:40:42.439Z",
+              "WhenOpened": "2024-12-25T06:56:53.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BannedWordsController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\BannedWordsController.cs",
+              "RelativeDocumentMoniker": "ubaT\\Controllers\\BannedWordsController.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\BannedWordsController.cs",
+              "RelativeToolTip": "ubaT\\Controllers\\BannedWordsController.cs",
+              "ViewState": "AgIAABMAAADgMjMzMzMiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T06:56:30.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameEditDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DTOs\\Games\\GameEditDto.cs",
+              "RelativeDocumentMoniker": "ubaT\\DTOs\\Games\\GameEditDto.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DTOs\\Games\\GameEditDto.cs",
+              "RelativeToolTip": "ubaT\\DTOs\\Games\\GameEditDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T06:30:27.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\GameService.cs",
+              "RelativeDocumentMoniker": "ubaT\\Services\\Implement\\GameService.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\GameService.cs",
+              "RelativeToolTip": "ubaT\\Services\\Implement\\GameService.cs",
+              "ViewState": "AgIAABwAAADgmJmZmZkBwDIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T05:32:13.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BannedWordNotFound.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Exceptions\\BannedWord\\BannedWordNotFound.cs",
+              "RelativeDocumentMoniker": "ubaT\\Exceptions\\BannedWord\\BannedWordNotFound.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Exceptions\\BannedWord\\BannedWordNotFound.cs",
+              "RelativeToolTip": "ubaT\\Exceptions\\BannedWord\\BannedWordNotFound.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T05:24:38.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BannedWordExistException.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Exceptions\\BannedWord\\BannedWordExistException.cs",
+              "RelativeDocumentMoniker": "ubaT\\Exceptions\\BannedWord\\BannedWordExistException.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Exceptions\\BannedWord\\BannedWordExistException.cs",
+              "RelativeToolTip": "ubaT\\Exceptions\\BannedWord\\BannedWordExistException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T05:23:54.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WordCreateDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\Words\\WordCreateDtoValidator.cs",
+              "RelativeDocumentMoniker": "ubaT\\Validators\\Words\\WordCreateDtoValidator.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\Words\\WordCreateDtoValidator.cs",
+              "RelativeToolTip": "ubaT\\Validators\\Words\\WordCreateDtoValidator.cs",
+              "ViewState": "AgIAAA4AAAAAFDMzMzPjvxMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T20:06:33.129Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "WordService.cs",
-              "DocumentMoniker": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\WordService.cs",
-              "RelativeDocumentMoniker": "ubaT\\Services\\Implement\\WordService.cs",
-              "ToolTip": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\Services\\Implement\\WordService.cs",
-              "RelativeToolTip": "ubaT\\Services\\Implement\\WordService.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwCkAAAAWAAAAAAAAAA==",
+              "Title": "BannedWordUpdateDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\BannedWord\\BannedWordUpdateDtoValidator.cs",
+              "RelativeDocumentMoniker": "ubaT\\Validators\\BannedWord\\BannedWordUpdateDtoValidator.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\BannedWord\\BannedWordUpdateDtoValidator.cs",
+              "RelativeToolTip": "ubaT\\Validators\\BannedWord\\BannedWordUpdateDtoValidator.cs",
+              "ViewState": "AgIAAAYAAADgmJmZmZkhwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:16:34.458Z",
+              "WhenOpened": "2024-12-24T20:00:42.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BannedWordCreateDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\BannedWord\\BannedWordCreateDtoValidator.cs",
+              "RelativeDocumentMoniker": "ubaT\\Validators\\BannedWord\\BannedWordCreateDtoValidator.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\BannedWord\\BannedWordCreateDtoValidator.cs",
+              "RelativeToolTip": "ubaT\\Validators\\BannedWord\\BannedWordCreateDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T20:00:18.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "ubaT\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\ll novbe\\Desktop\\ubaT.API\\ubaT\\ServiceRegistration.cs",
-              "RelativeToolTip": "ubaT\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABHAAAAAAAAAA==",
+              "Title": "GameCreateDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\Games\\GameCreateDtoValidator.cs",
+              "RelativeDocumentMoniker": "ubaT\\Validators\\Games\\GameCreateDtoValidator.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Validators\\Games\\GameCreateDtoValidator.cs",
+              "RelativeToolTip": "ubaT\\Validators\\Games\\GameCreateDtoValidator.cs",
+              "ViewState": "AgIAAAcAAADAyszMzMwcwAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:16:08.669Z",
+              "WhenOpened": "2024-12-24T19:57:12.96Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GamesController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\GamesController.cs",
+              "RelativeDocumentMoniker": "ubaT\\Controllers\\GamesController.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Controllers\\GamesController.cs",
+              "RelativeToolTip": "ubaT\\Controllers\\GamesController.cs",
+              "ViewState": "AgIAAEAAAAAAQDMzMzP7v0wAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T19:16:42.891Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ubaTDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DAL\\ubaTDbContext.cs",
+              "RelativeDocumentMoniker": "ubaT\\DAL\\ubaTDbContext.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\DAL\\ubaTDbContext.cs",
+              "RelativeToolTip": "ubaT\\DAL\\ubaTDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T15:28:55.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IGameService.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Abstracts\\IGameService.cs",
+              "RelativeDocumentMoniker": "ubaT\\Services\\Abstracts\\IGameService.cs",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\ubaT.API\\ubaT\\Services\\Abstracts\\IGameService.cs",
+              "RelativeToolTip": "ubaT\\Services\\Abstracts\\IGameService.cs",
+              "ViewState": "AgIAAAUAAAAwmJmZmZkuwAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T15:10:35.611Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -28,7 +28,7 @@ namespace ubaT.Controllers
                 {
                     return StatusCode(Bex.StatusCode, new
                     {
-                        Mesage = Bex.ErrorMessage
+                        Message = Bex.ErrorMessage
                     });
 
                 }

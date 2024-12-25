@@ -32,7 +32,7 @@ namespace ubaT.Services.Implement
             }
             else
             {
-                throw new BannedWordExistException($"{text}  uygun qadagan edilmis soz tapilmadi,zehmet olmasa duzgun qadagan edilmis soz daxil edin ");
+                throw new BannedWordNotFound();
             }
         }
         public async Task<int> CreateAsync(BannedWordCreateDto dto)
@@ -64,7 +64,7 @@ namespace ubaT.Services.Implement
             }
             else
             {
-                throw new BannedWordExistException($"{text}  uygun qadagan edilmis  soz tapilmadi,zehmet olmasa duzgun  qadagan edilmis soz daxil edin ");
+                throw new BannedWordNotFound();
             }
 
       
@@ -81,7 +81,7 @@ namespace ubaT.Services.Implement
             }
             else
             {
-                throw new BannedWordExistException($"{text}  uygun qadagan edilmis  soz tapilmadi,zehmet olmasa duzgun qadagan edilmis soz daxil edin ");
+                throw new BannedWordNotFound();
             }
         }
 

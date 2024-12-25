@@ -4,12 +4,12 @@ namespace ubaT.Services.Abstracts
 {
     public interface IGameService
     {
-        Task CreateAsync(GameCreateDto dto);
-        Task Start(Guid Id);
-        Task Success();
-        Task Fail();
-        Task Skip();
-        Task End();
-        Task Edit();
+        Task<Guid> CreateAsync(GameCreateDto dto);
+        Task<Guid> Start(Guid Id);
+        Task<Guid> Success(GameSuccessDto dto,Guid id);
+        Task<Guid> Fail();
+        Task<Guid> Skip();
+        Task<Guid> End();
+        Task<Guid> Edit(GameEditDto dto,Guid Id);
     }
 }

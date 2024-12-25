@@ -9,6 +9,7 @@ namespace ubaT.Profiles
         public GameProfile() 
         {
             CreateMap<GameCreateDto, Game>();
+            CreateMap<GameEditDto, Game>();
         
         }
     }

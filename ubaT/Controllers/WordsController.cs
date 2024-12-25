@@ -21,7 +21,7 @@ namespace ubaT.Controllers
         {
             return Ok(await _service.GetByTextAsync(text));
         }
-        [HttpPost]
+        [HttpPost("[action]")]
         public async Task<IActionResult> Create(WordCreateDto dto)
         {
             await _service.CreateAsync(dto);
