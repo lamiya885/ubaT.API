@@ -18,16 +18,16 @@ namespace ubaT.Controllers
         {
             try
             {
-            return Ok(await _service.CreateAsync(dto));
+                return Ok(await _service.CreateAsync(dto));
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                if(ex is IBaseException bEx)
+                if (ex is IBaseException bEx)
                 {
                     return StatusCode(bEx.StatusCode, new
                     {
-                    message=bEx.ErrorMessage
+                        message = bEx.ErrorMessage
                     });
 
                 }
@@ -40,6 +40,7 @@ namespace ubaT.Controllers
                 }
             }
         }
+        [HttpPost("[action]/{id}")]
         public async Task<ActionResult<Guid>> Edit(GameEditDto dto ,Guid id)
         {
             try
@@ -68,6 +69,7 @@ namespace ubaT.Controllers
             }
 
         }
+        [HttpOptions("[action]/{Id}")]
         public async Task Game(Guid Id)
         {
             

@@ -45,7 +45,7 @@ namespace ubaT.Services.Implement
 
         public async Task<Guid> Start (Guid Id)
         {
-            if (await _context.Games.AnyAsync(x => x.Id == Id))
+            if (await _context.Games.AnyAsync(x => x.Id == Id&& x.Score==null))
             {
              
             var entity = _context.Games.FirstOrDefault(x=>x.Id==Id);
@@ -54,10 +54,23 @@ namespace ubaT.Services.Implement
             return entity.Id;
 
             }
+            else if(await _context.Games.AnyAsync(x => x.Id == Id && x.Score != null))
+            {
+                throw new  GameAllReadyFinished();
+
+            }
             else
             {
                 throw new GameNotFound();
             }
+            GameStatusDto status=new GameStatusDto();
+            {
+                Fail=0,
+                Skip=0,
+                Success=0
+
+            }
+
         }
 
         public Task<Guid> End()

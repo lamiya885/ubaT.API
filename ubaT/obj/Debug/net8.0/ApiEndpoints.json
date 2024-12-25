@@ -79,6 +79,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ubaT.Controllers.GamesController",
+    "Method": "Create",
+    "RelativePath": "api/Games/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ubaT.DTOs.Games.GameCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Guid",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ubaT.Controllers.GamesController",
+    "Method": "Edit",
+    "RelativePath": "api/Games/Edit/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ubaT.DTOs.Games.GameEditDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Guid",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ubaT.Controllers.GamesController",
+    "Method": "Game",
+    "RelativePath": "api/Games/Game/{Id}",
+    "HttpMethod": "OPTIONS",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ubaT.Controllers.LanguagesController",
     "Method": "Create",
     "RelativePath": "api/Languages/Create",
@@ -160,7 +239,7 @@
   {
     "ContainingType": "ubaT.Controllers.WordsController",
     "Method": "Create",
-    "RelativePath": "api/Words",
+    "RelativePath": "api/Words/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

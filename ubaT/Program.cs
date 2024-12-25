@@ -14,7 +14,7 @@ namespace ubaT
 {
     public class Program
     {
-        public static async void Main(string[] args)
+        public static  void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -43,47 +43,8 @@ namespace ubaT
                 app.UseSwaggerUI();
             }
 
-            app.Run(async context=>
-            {
-                Console.WriteLine("Middleware worked");
+            app.UseubaTExceptionHandler();
 
-            });
-
-            app.UseExceptionHandler(
-                opt =>
-                {
-                    opt.Run(async context =>
-                    {
-
-                        var feature = context.Features.GetRequiredFeature<ExceptionHandlerFeature>();
-                       var exception = feature.Error;
-                        if (exception is IBaseException Bex)
-                        {
-                            context.Response.StatusCode=Bex.StatusCode;
-                            await context.Response.WriteAsJsonAsync(new
-                            {
-                                Message=Bex.ErrorMessage
-                            });
-                            //return StatusCode(Bex.StatusCode, new
-                            //{
-                            //    Mesage = Bex.ErrorMessage
-                            //});
-
-                        }
-                        else
-                        {
-                            context.Response.StatusCode = 400;
-                            await context.Response.WriteAsJsonAsync(new
-                            {
-                                Message ="Bir xeta bash verdi"
-                            });
-                            //return BadRequest(new
-                            //{
-                            //    Message = exception.Message
-                            //});
-                        }
-                    });
-                });
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
