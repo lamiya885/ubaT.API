@@ -11,7 +11,7 @@ namespace ubaT.Validators.Games
                 .NotEmpty()
                 .NotNull()
                 .Must(x => x > 4)
-                .Must(x => x < 6);
+                .Must(x => x <= 6);
             RuleFor(x => x.LangCode)
                  .NotEmpty()
                  .WithMessage("Kod boş ola bilməz ")

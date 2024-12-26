@@ -13,31 +13,31 @@ using TimeSpan = System.TimeSpan;
 
 namespace ubaT.Services.Implement
 {
-    public class GameService(ubaTDbContext _context,IMapper _mapper,IMemoryCache _cache ) : IGameService
+    public class GameService(ubaTDbContext _context, IMapper _mapper, IMemoryCache _cache) : IGameService
     {
         public async Task<Guid> CreateAsync(GameCreateDto dto)
         {
-           Game game  = _mapper.Map<GameCreateDto,Game>(dto);
-            if(await _context.Games.AnyAsync(x=>x.Id==game.Id))
-            {
-            await _context.Games.AddAsync(game);
-            await _context.SaveChangesAsync();
-            return game.Id;
-            }
-            else
+            Game game = _mapper.Map<GameCreateDto, Game>(dto);
+            if (await _context.Games.AnyAsync(x => x.Id == game.Id))
             {
                 throw new GameNotFound();
             }
+            else
+            {
+                await _context.Games.AddAsync(game);
+                await _context.SaveChangesAsync();
+                return game.Id;
+            }
         }
 
-        public async Task<Guid> Edit(GameEditDto dto,Guid id)
+        public async Task<Guid> Edit(GameEditDto dto, Guid id)
         {
-            if(await _context.Games.AnyAsync(x=>x.Id==id))
+            if (await _context.Games.AnyAsync(x => x.Id == id))
             {
-            Game game = _mapper.Map<GameEditDto,Game>(dto);
-             _context.Games.Update(game);
-            await _context.SaveChangesAsync();
-            return game.Id;
+                Game game = _mapper.Map<GameEditDto, Game>(dto);
+                _context.Games.Update(game);
+                await _context.SaveChangesAsync();
+                return game.Id;
 
             }
             else
@@ -46,43 +46,43 @@ namespace ubaT.Services.Implement
             }
         }
 
-        public async Task<WordForGameDto> Start (Guid Id)
+        public async Task<WordForGameDto> Start(Guid Id)
         {
             var game = await _context.Games.FindAsync(Id);
-          if(game==null||game.Score==null)
+            if (game != null || game.Score == null)
             {
-            IQueryable<Word> query = _context.Words
-                .Where(x => x.LangCode == game.LangCode);
-            var words=await  query
-                .Select(x=>new WordForGameDto
+                IQueryable<Word> query = _context.Words
+                    .Where(x => x.LangCode == game.LangCode);
+                var words = await query
+                    .Select(x => new WordForGameDto
+                    {
+                        Id = x.Id,
+                        Word = x.Text,
+                        BannedWords = x.BannedWords.Select(x => x.Text)
+                    })
+                    .Random(await query.CountAsync())
+                    .Take(20)
+                    .ToListAsync();
+
+                var wordsStack = new Stack<WordForGameDto>(words);
+                WordForGameDto currentWord = wordsStack.Pop();
+                GameStatusDto status = new GameStatusDto()
                 {
-                    Id= x.Id,
-                    Word=x.Text,
-                    BannedWords=x.BannedWords.Select(x=>x.Text)
-                })
-                .Random(await query.CountAsync())
-                .Take(20)
-                .ToListAsync(); 
+                    Fail = 0,
+                    Success = 0,
+                    Skip = 0,
+                    Words = wordsStack,
+                    MaxSkipCount = game.SkipCount,
+                    UssedWordIds = words.Select(x => x.Id)
+                };
 
-            var wordsStack = new Stack<WordForGameDto>(words);
-            WordForGameDto currentWord=wordsStack.Pop();
-            GameStatusDto status = new GameStatusDto()
-            {
-                Fail = 0,
-                Success = 0,
-                Skip = 0,
-                Words= wordsStack,
-                MaxSkipCount= game.SkipCount,
-                UssedWordIds=words.Select(x=>x.Id)
-            };
+                _cache.Set(Id, status, TimeSpan.FromSeconds(300));
 
-            _cache.Set(Id, status,TimeSpan.FromSeconds(300));
-
-            return currentWord;
+                return currentWord;
 
 
             }
-            else  if(game==null||game.Score!=null)
+            else if (game == null || game.Score != null)
             {
                 throw new GameAllReadyFinished();
             }
@@ -94,44 +94,45 @@ namespace ubaT.Services.Implement
 
             //SQL de startedTime saxla, success;fail;skip oyunun bitib bitmediyini yoxla, eger istifadeci 20den cox soz bilse 5 soz getirsin
 
-          //  _cache.Set(Id, status,TimeSpan.FromSeconds(game.Time+20)); 
-           // if (await _context.Games.AnyAsync(x => x.Id == Id&& x.Score==null))
-           // {
-             
-           // var entity = _context.Games.FirstOrDefault(x=>x.Id==Id);
-           //_catche.Set<Guid>(Id,entity.Id, DateTime.Now.AddSeconds(entity.Time));
-           //_catche.Set<Game>(Id,entity);
-           // return entity.Id;
+            //  _cache.Set(Id, status,TimeSpan.FromSeconds(game.Time+20)); 
+            // if (await _context.Games.AnyAsync(x => x.Id == Id&& x.Score==null))
+            // {
 
-           // }
-           // else if(await _context.Games.AnyAsync(x => x.Id == Id && x.Score != null))
-           // {
-           //     throw new  GameAllReadyFinished();
+            // var entity = _context.Games.FirstOrDefault(x=>x.Id==Id);
+            //_catche.Set<Guid>(Id,entity.Id, DateTime.Now.AddSeconds(entity.Time));
+            //_catche.Set<Game>(Id,entity);
+            // return entity.Id;
 
-           // }
-           // else
-           // {
-           //     throw new GameNotFound();
-           // }
-           // GameStatusDto status=new GameStatusDto();
-           // {
-           //     Fail=0,
-           //     Skip=0,
-           //     Success=0
+            // }
+            // else if(await _context.Games.AnyAsync(x => x.Id == Id && x.Score != null))
+            // {
+            //     throw new  GameAllReadyFinished();
 
-           // }
+            // }
+            // else
+            // {
+            //     throw new GameNotFound();
+            // }
+            // GameStatusDto status=new GameStatusDto();
+            // {
+            //     Fail=0,
+            //     Skip=0,
+            //     Success=0
+
+            // }
 
         }
 
-        public   Task<Guid> End(Guid Id)
+        public async Task<Guid> End(Guid Id)
         {
-            var game =  _context.Games.FindAsync(Id);
-            if(game==null ||game.Score !=null)
+            var game = await _context.Games.FindAsync(Id);
+            if (game == null || game.Score != null)
             {
-                 throw new GameAllreadyNotStarted();
+                throw new GameAllreadyNotStarted();
             }
-            else if(game!=null)
+            else if (game != null)
             {
+                throw new GameAllreadyNotStarted();
 
             }
             else
@@ -141,20 +142,20 @@ namespace ubaT.Services.Implement
 
 
         }
-        public Task<WordForGameDto> Success(Guid Id)
+        public async Task<WordForGameDto> Success(Guid Id)
         {
             var status = _getCurrentGame(Id);
-            Game game= _context.Games.Find(Id);
-            var currentWord = status.Words.Pop();
+            Game game = _context.Games.Find(Id);
+            WordForGameDto currentWord = status.Words.Pop();
             status.Success++;
             game.Score++;
             _cache.Set(Id, status, TimeSpan.FromSeconds(300));
-            return currentWord;
 
+            return currentWord;
         }
-        public Task<WordForGameDto> Fail(Guid Id)
+        public async Task<WordForGameDto> Fail(Guid Id)
         {
-            var status=_getCurrentGame(Id);
+            var status = _getCurrentGame(Id);
             Game game = _context.Games.Find(Id);
             var currentWord = status.Words.Pop();
             status.Fail++;
@@ -165,25 +166,24 @@ namespace ubaT.Services.Implement
 
         public async Task<WordForGameDto> Skip(Guid Id)
         {
-            var status= _getCurrentGame(Id);
-            if(status.Skip<=status.MaxSkipCount)
+            var status = _getCurrentGame(Id);
+            if (status.Skip <= status.MaxSkipCount)
             {
-              var currentWord =  status.Words.Pop();
+                var currentWord = status.Words.Pop();
                 status.Skip++;
-                _cache.Set(Id, status,TimeSpan.FromSeconds(300));
+                _cache.Set(Id, status, TimeSpan.FromSeconds(300));
                 return currentWord;
             }
             return null;
         }
-        GameStatusDto _getCurrentGame (Guid id)
+        GameStatusDto _getCurrentGame(Guid id)
         {
 
-            var result=_cache.Get<GameStatusDto>(id);
+            var result = _cache.Get<GameStatusDto>(id);
             if (result == null) throw new GameNotFound();
-           return result;
+            return result;
         }
 
 
-        
     }
 }

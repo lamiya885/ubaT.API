@@ -28,6 +28,15 @@ namespace ubaT.Controllers
             return Ok();
 
         }
+        [HttpPost("[action]")]
+        public async Task<IActionResult> CreateMany(List<WordCreateDto> dto)
+        {
+            foreach(var item in dto)
+            {
+                await _service.CreateAsync(item);
+            }
+            return Ok();
+        }
         [HttpPost("[action]/{text}")]
         public async Task<IActionResult> Update(WordUpdateDto dto,string text)
         {

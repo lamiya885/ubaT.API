@@ -254,6 +254,22 @@
   },
   {
     "ContainingType": "ubaT.Controllers.WordsController",
+    "Method": "CreateMany",
+    "RelativePath": "api/Words/CreateMany",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "System.Collections.Generic.List\u00601[[ubaT.DTOs.Words.WordCreateDto, ubaT, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ubaT.Controllers.WordsController",
     "Method": "Delete",
     "RelativePath": "api/Words/Delete/{text}",
     "HttpMethod": "DELETE",

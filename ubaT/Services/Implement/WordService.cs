@@ -32,6 +32,7 @@ namespace ubaT.Services.Implement
                 throw new WordExistException($"{text}  uygun soz tapilmadi,zehmet olmasa duzgun soz daxil edin ");
             }
         }
+
         public async Task<int> CreateAsync(WordCreateDto dto)
         {
             if (await _context.Words.AnyAsync(x => x.Text == dto.Text))
