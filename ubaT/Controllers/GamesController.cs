@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using ubaT.DTOs.Games;
+using ubaT.DTOs.Words;
 using ubaT.Entities;
 using ubaT.Exceptions;
 using ubaT.Services.Abstracts;
@@ -73,8 +74,8 @@ namespace ubaT.Controllers
         public async Task Game(Guid Id)
         {
             
-             Guid  id= await _service.Start(Id);
-             _cache.Set<Guid>(Id, id);
+             WordForGameDto dto= await _service.Start(Id);
+             _cache.Set(Id, dto);
 
         }
     }

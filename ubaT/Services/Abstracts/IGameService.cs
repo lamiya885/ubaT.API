@@ -1,15 +1,16 @@
 ﻿using ubaT.DTOs.Games;
+using ubaT.DTOs.Words;
 
 namespace ubaT.Services.Abstracts
 {
     public interface IGameService
     {
         Task<Guid> CreateAsync(GameCreateDto dto);
-        Task<Guid> Start(Guid Id);
-        Task<Guid> Success(GameSuccessDto dto,Guid id);
-        Task<Guid> Fail();
-        Task<Guid> Skip();
-        Task<Guid> End();
+        Task<WordForGameDto> Start(Guid Id);
+        Task<WordForGameDto> Success(Guid Id);
+        Task<Guid> Fail(Guid Id );
+        Task<WordForGameDto> Skip(Guid Id);
+        Task<Guid> End(Guid Id);
         Task<Guid> Edit(GameEditDto dto,Guid Id);
     }
 }
