@@ -12,7 +12,7 @@ namespace ubaT.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GamesController(IGameService _service,IMapper _mapper,IMemoryCache _cache) : ControllerBase
+    public class GamesController(IGameService _service) : ControllerBase
     {
         [HttpPost("[action]")]
         public async Task<ActionResult<Guid>> Create(GameCreateDto dto)
@@ -77,7 +77,7 @@ namespace ubaT.Controllers
         {
             
              var dto= await _service.Start(Id);
-             _cache.Set(Id, dto);
+             //_cache.Set(Id, dto);Controllerde ancaq servisin methodunu cagiririq
             return dto;
         }
         [HttpPost("[action]")]

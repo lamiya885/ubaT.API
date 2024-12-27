@@ -10,7 +10,7 @@ namespace ubaT.Services.Abstracts
         Task<WordForGameDto> Success(Guid Id);
         Task<WordForGameDto> Fail(Guid Id );
         Task<WordForGameDto> Skip(Guid Id);
-        Task<Guid> End(Guid Id);
+        Task<GameStatusDto> End(Guid Id);
         Task<Guid> Edit(GameEditDto dto,Guid Id);
     }
 }

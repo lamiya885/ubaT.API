@@ -22,11 +22,11 @@ namespace ubaT
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddControllers();
             builder.Services.AddDbContext<ubaTDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("MSSql")));
+            builder.Services.AddMemoryCache();
 
             builder.Services.AddFluentValidationAutoValidation();
             builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
-            builder.Services.AddMemoryCache();
             builder.Services.AddServices();
 
 
