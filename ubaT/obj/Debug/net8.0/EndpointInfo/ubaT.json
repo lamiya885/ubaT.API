@@ -246,8 +246,8 @@
         }
       }
     },
-    "/api/Games/Game/{Id}": {
-      "options": {
+    "/api/Games/Start/{Id}": {
+      "post": {
         "tags": [
           "Games"
         ],
@@ -264,7 +264,102 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordForGameDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordForGameDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordForGameDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Games/Success": {
+      "post": {
+        "tags": [
+          "Games"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordForGameDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordForGameDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordForGameDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Games/Fail": {
+      "delete": {
+        "tags": [
+          "Games"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordForGameDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordForGameDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WordForGameDto"
+                }
+              }
+            }
           }
         }
       }
@@ -462,6 +557,46 @@
         }
       }
     },
+    "/api/Words/CreateMany": {
+      "post": {
+        "tags": [
+          "Words"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/WordCreateDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/WordCreateDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/WordCreateDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Words/Update/{text}": {
       "post": {
         "tags": [
@@ -528,6 +663,27 @@
   },
   "components": {
     "schemas": {
+      "BannedWord": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "wordId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "word": {
+            "$ref": "#/components/schemas/Word"
+          }
+        },
+        "additionalProperties": false
+      },
       "BannedWordCreateDto": {
         "type": "object",
         "properties": {
@@ -535,9 +691,12 @@
             "type": "string",
             "nullable": true
           },
-          "wordText": {
-            "type": "string",
-            "nullable": true
+          "wordId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "word": {
+            "$ref": "#/components/schemas/Word"
           }
         },
         "additionalProperties": false
@@ -549,9 +708,64 @@
             "type": "string",
             "nullable": true
           },
+          "wordId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "wordText": {
             "type": "string",
             "nullable": true
+          },
+          "word": {
+            "$ref": "#/components/schemas/Word"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Game": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bannedWordCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "failCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skipCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "time": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "score": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "successAnswer": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "wrongAnswer": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "language": {
+            "$ref": "#/components/schemas/Language"
           }
         },
         "additionalProperties": false
@@ -608,6 +822,38 @@
         },
         "additionalProperties": false
       },
+      "Language": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "icon": {
+            "type": "string",
+            "nullable": true
+          },
+          "games": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Game"
+            },
+            "nullable": true
+          },
+          "words": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Word"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "LanguageCreateDto": {
         "type": "object",
         "properties": {
@@ -644,6 +890,34 @@
         },
         "additionalProperties": false
       },
+      "Word": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "language": {
+            "$ref": "#/components/schemas/Language"
+          },
+          "bannedWords": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BannedWord"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "WordCreateDto": {
         "type": "object",
         "properties": {
@@ -657,6 +931,31 @@
           },
           "bannedWords": {
             "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WordForGameDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "word": {
+            "type": "string",
+            "nullable": true
+          },
+          "wordText": {
+            "type": "string",
+            "nullable": true
+          },
+          "bannedWords": {
             "type": "array",
             "items": {
               "type": "string"

@@ -70,13 +70,28 @@ namespace ubaT.Controllers
             }
 
         }
-        [HttpOptions("[action]/{Id}")]
-        public async Task Game(Guid Id)
+
+
+        [HttpPost("[action]/{Id}")]
+        public async Task<WordForGameDto> Start(Guid Id)
         {
             
              WordForGameDto dto= await _service.Start(Id);
              _cache.Set(Id, dto);
-
+            return dto;
         }
+        [HttpPost("[action]")]
+        public async Task<WordForGameDto> Success (Guid Id)
+        {
+            WordForGameDto dto= await _service.Success(Id);
+            return dto;
+        }
+        [HttpDelete("[action]")]
+        public async Task<WordForGameDto> Fail(Guid Id)
+        {
+            WordForGameDto dto = await _service.Fail(Id);
+            return dto;
+        }
+
     }
 }

@@ -9,6 +9,7 @@ namespace ubaT.Profiles
         public BannedWordProfile ()
         {
             CreateMap<BannedWordCreateDto,BannedWord>();
+            .
             CreateMap<BannedWordUpdateDto,BannedWord>();
             CreateMap<BannedWord, BannedWordGetDto>();
 

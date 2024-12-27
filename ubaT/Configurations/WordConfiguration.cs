@@ -23,6 +23,7 @@ namespace ubaT.Configrations
                  .WithOne(x => x.Word)
                  .HasForeignKey(x => x.WordId);
 
+
             builder.Property(x => x.Text)
                     .IsRequired()
                     .HasMaxLength(32);

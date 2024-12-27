@@ -10,8 +10,11 @@ namespace ubaT.Profiles
         public WordProfile()
         { 
           CreateMap<WordCreateDto,Word>()
-                .ForMember(dest => dest.BannedWords, opt => opt.MapFrom(src => src.BannedWords!.Select(bw => new BannedWord { Text = bw }).ToList()))
-                 ;
+                .ForMember(w => w.BannedWords, wcd => wcd.MapFrom(x => x.BannedWords!.Select(bw => new BannedWord { Text = bw }).ToList()))
+                 ;    
+            //CreateMap<WordCreateDto,Word>()
+            //    .ForMember(w => w.BannedWords, wcd => wcd.MapFrom(x => x.BannedWords!.Select(bw => new BannedWord { Text = bw }).ToList()))
+            //     ;
             CreateMap<WordUpdateDto,Word>();
           CreateMap<Word, WordGetDto>();
         }

@@ -137,9 +137,35 @@
   },
   {
     "ContainingType": "ubaT.Controllers.GamesController",
-    "Method": "Game",
-    "RelativePath": "api/Games/Game/{Id}",
-    "HttpMethod": "OPTIONS",
+    "Method": "Fail",
+    "RelativePath": "api/Games/Fail",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ubaT.DTOs.Words.WordForGameDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ubaT.Controllers.GamesController",
+    "Method": "Start",
+    "RelativePath": "api/Games/Start/{Id}",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -151,8 +177,38 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "ubaT.DTOs.Words.WordForGameDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ubaT.Controllers.GamesController",
+    "Method": "Success",
+    "RelativePath": "api/Games/Success",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ubaT.DTOs.Words.WordForGameDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 200
       }
     ]

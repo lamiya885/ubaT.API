@@ -126,18 +126,13 @@ namespace ubaT.Services.Implement
         public async Task<Guid> End(Guid Id)
         {
             var game = await _context.Games.FindAsync(Id);
-            if (game == null || game.Score != null)
+            if (game.Time==0)
             {
-                throw new GameAllreadyNotStarted();
+                return game.Id;
             }
-            else if (game != null)
+            else 
             {
-                throw new GameAllreadyNotStarted();
-
-            }
-            else
-            {
-                throw new GameNotFound();
+                throw new GameCanNotEnd();
             }
 
 
@@ -152,6 +147,16 @@ namespace ubaT.Services.Implement
             _cache.Set(Id, status, TimeSpan.FromSeconds(300));
 
             return currentWord;
+            //return currentWord;
+            //if(game != null )
+            //var status = _getCurrentGame(Id);
+            //Game game = _context.Games.Find(Id);
+            //WordForGameDto currentWord = status.Words.Pop();
+            //status.Success++;
+            //game.Score++;
+            //_cache.Set(Id, status, TimeSpan.FromSeconds(300));
+
+            //return currentWord;
         }
         public async Task<WordForGameDto> Fail(Guid Id)
         {

@@ -15,6 +15,8 @@ namespace ubaT.Configurations
             builder.HasOne(x => x.Word)
                   .WithMany(x => x.BannedWords)
                   .HasForeignKey(x => x.WordId);
+          //  builder.Property(x => x.WordText);
+
 
         }
     }
