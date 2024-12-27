@@ -17,10 +17,10 @@ namespace ubaT.Services.Implement
     {
         public async Task<Guid> CreateAsync(GameCreateDto dto)
         {
-            Game game = _mapper.Map<GameCreateDto, Game>(dto);
+            Game game = _mapper.Map<Game>(dto);
             if (await _context.Games.AnyAsync(x => x.Id == game.Id))
             {
-                throw new GameNotFound();
+                throw new Exception();
             }
             else
             {
@@ -49,47 +49,81 @@ namespace ubaT.Services.Implement
         public async Task<WordForGameDto> Start(Guid Id)
         {
             var game = await _context.Games.FindAsync(Id);
-            if (game != null || game.Score == null)
+            if (game.Score==null)
             {
-                IQueryable<Word> query = _context.Words
-                    .Where(x => x.LangCode == game.LangCode);
-                var words = await query
-                    .Select(x => new WordForGameDto
-                    {
-                        Id = x.Id,
-                        Word = x.Text,
-                        BannedWords = x.BannedWords.Select(x => x.Text)
-                    })
-                    .Random(await query.CountAsync())
-                    .Take(20)
-                    .ToListAsync();
-
-                var wordsStack = new Stack<WordForGameDto>(words);
-                WordForGameDto currentWord = wordsStack.Pop();
-                GameStatusDto status = new GameStatusDto()
+                throw new Exception();
+            }
+            IQueryable<Word> query = _context.Words
+                 .Where(x => x.LangCode == game.LangCode);
+            var words = await query
+                .Select(x => new WordForGameDto
                 {
-                    Fail = 0,
-                    Success = 0,
-                    Skip = 0,
-                    Words = wordsStack,
-                    MaxSkipCount = game.SkipCount,
-                    UssedWordIds = words.Select(x => x.Id)
-                };
+                    Id = x.Id,
+                    Word = x.Text,
+                    BannedWords = x.BannedWords.Select(y => y.Text)
+                })
+                .Random(await query.CountAsync())
+                .Take(20)
+                .ToListAsync();
 
-                _cache.Set(Id, status, TimeSpan.FromSeconds(300));
-
-                return currentWord;
-
-
-            }
-            else if (game == null || game.Score != null)
+            var wordsStack = new Stack<WordForGameDto>(words);
+            WordForGameDto currentWord = wordsStack.Pop();
+            GameStatusDto status = new GameStatusDto()
             {
-                throw new GameAllReadyFinished();
-            }
-            else
-            {
-                throw new GameNotFound();
-            }
+                Fail = 0,
+                Success = 0,
+                Skip = 0,
+                Words = wordsStack,
+                MaxSkipCount = game.SkipCount,
+                UssedWordIds = words.Select(x => x.Id)
+            };
+
+            _cache.Set(Id, status, TimeSpan.FromSeconds(300));
+
+            return currentWord;
+
+
+            //if (game == null || game.Score == null)
+            //{
+            //    IQueryable<Word> query = _context.Words
+            //        .Where(x => x.LangCode == game.LangCode);
+            //    var words = await query
+            //        .Select(x => new WordForGameDto
+            //        {
+            //            Id = x.Id,
+            //            Word = x.Text,
+            //            BannedWords = x.BannedWords.Select(y => y.Text)
+            //        })
+            //        .Random(await query.CountAsync())
+            //        .Take(20)
+            //        .ToListAsync();
+
+            //    var wordsStack = new Stack<WordForGameDto>(words);
+            //    WordForGameDto currentWord = wordsStack.Pop();
+            //    GameStatusDto status = new GameStatusDto()
+            //    {
+            //        Fail = 0,
+            //        Success = 0,
+            //        Skip = 0,
+            //        Words = wordsStack,
+            //        MaxSkipCount = game.SkipCount,
+            //        UssedWordIds = words.Select(x => x.Id)
+            //    };
+
+            //    _cache.Set(Id, status, TimeSpan.FromSeconds(300));
+
+            //    return currentWord;
+
+
+            //}
+            //else if (game != null || game.Score != null)
+            //{
+            //    throw new GameAllReadyFinished();
+            //}
+            //else
+            //{
+            //    throw new GameNotFound();
+            //}
 
 
             //SQL de startedTime saxla, success;fail;skip oyunun bitib bitmediyini yoxla, eger istifadeci 20den cox soz bilse 5 soz getirsin

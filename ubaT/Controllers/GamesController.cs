@@ -76,7 +76,7 @@ namespace ubaT.Controllers
         public async Task<WordForGameDto> Start(Guid Id)
         {
             
-             WordForGameDto dto= await _service.Start(Id);
+             var dto= await _service.Start(Id);
              _cache.Set(Id, dto);
             return dto;
         }
